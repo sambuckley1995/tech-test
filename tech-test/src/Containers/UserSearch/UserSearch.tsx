@@ -58,6 +58,7 @@ const UserSearch = () => {
     const filteredUsers =
       users &&
       users?.filter(
+        // I'm sure you will notice, this only works if searching on one field at a time.
         (user) =>
           (searchCriteria.name &&
             user.name
@@ -73,8 +74,7 @@ const UserSearch = () => {
             !searchCriteria.companyName &&
             !searchCriteria.email)
       );
-    console.log(searchCriteria);
-    console.log(filteredUsers);
+
     setFilteredUsers(filteredUsers);
   }, [searchCriteria]);
 
