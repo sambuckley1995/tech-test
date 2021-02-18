@@ -78,7 +78,9 @@ const UserSearch = () => {
     setFilteredUsers(filteredUsers);
   }, [searchCriteria]);
 
-  return (
+  const content = isLoading ? (
+    <h2>Please bare with us</h2>
+  ) : (
     <section className={styles.bodyWrapper}>
       <Search
         searchCriteria={searchCriteria}
@@ -87,6 +89,8 @@ const UserSearch = () => {
       {users && <Users users={filteredUsers || users} />}
     </section>
   );
+
+  return content;
 };
 
 export default UserSearch;
