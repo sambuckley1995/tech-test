@@ -1,0 +1,11 @@
+@import "../assets/variables.scss";
+
+.App {
+  background-color: $bg-off-white;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $text-light;
+}
