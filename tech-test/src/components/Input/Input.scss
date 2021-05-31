@@ -1,0 +1,51 @@
+@import "../../assets/variables.scss";
+
+.input {
+  width: 100%;
+
+  > label {
+    color: $text-dark;
+  }
+
+  > input {
+    border-radius: $border-radius;
+    border-color: $border-color;
+    height: $default-spacing * 7;
+
+    border: 1px solid $border-color;
+
+    &:focus-visible {
+      outline: none;
+      border: 1px solid $active-border-color;
+    }
+  }
+}
+
+.email {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  > input {
+    width: 100%;
+  }
+  > label {
+    margin-bottom: $default-spacing * 2;
+  }
+}
+
+.checkbox {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center;
+
+  > input {
+    width: $default-spacing * 5;
+  }
+
+  > label {
+    margin-left: $default-spacing * 2;
+  }
+}

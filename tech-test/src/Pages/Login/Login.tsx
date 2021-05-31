@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
+import CheckboxInput from "../../components/Input/CheckboxInput";
+import EmailInput from "../../components/Input/EmailInput";
+import { InputType } from "../../types";
 import "./Login.scss";
 
 const Login: React.FC = () => {
+  const [emailAddress, setEmailAddress] = useState("");
+  const [shouldRememberDevice, setShouldRememberDevice] = useState(false);
+  console.log(emailAddress);
+
   return (
     <section className="login">
       <div className="login-inner">
@@ -10,16 +17,23 @@ const Login: React.FC = () => {
           className="app-logo"
           alt="green-logo"
         />
-        <h1>Operations Studio</h1>
-        <p>Please enter you email below</p>
-        <div className="email-input">
-          <label>Email Address</label>
-          <input type="email" />
-        </div>
         <div>
-          <input type="checkbox" />
-          <label>Remember this device</label>
+          <h1>Operations Studio</h1>
+          <p>Please enter you email below</p>
         </div>
+
+        <EmailInput
+          inputValue={emailAddress}
+          setInputValue={setEmailAddress}
+          label="Email Address"
+        />
+
+        <CheckboxInput
+          inputValue={shouldRememberDevice}
+          setInputValue={setShouldRememberDevice}
+          label="Remember this device"
+        />
+
         <button>Sign In</button>
       </div>
     </section>

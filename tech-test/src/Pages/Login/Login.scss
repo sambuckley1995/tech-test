@@ -2,19 +2,45 @@
 
 .login {
   background-color: white;
+  height: $default-spacing * 100;
+  width: $default-spacing * 100;
+
   border: 1px solid $border-color;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+
   > .login-inner {
-    margin: 20px;
-    > h1 {
-      color: $text-dark;
+    margin: 50px;
+    height: calc(100% - 100px);
+    width: calc(100% - 100px);
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    > div {
+      > h1 {
+        color: $text-dark;
+        font-weight: 600;
+        font-size: $h1-size;
+        margin-bottom: $default-spacing;
+      }
+
+      > p {
+        margin-top: $default-spacing;
+        font-size: 15px;
+      }
+    }
+
+    > button {
+      background-color: $bg-off-white;
+      padding: $default-spacing * 3 $default-spacing * 5;
+      border: 1px solid $border-color;
+      border-radius: $border-radius;
+      font-family: inherit;
     }
   }
 }
 
 .app-logo {
-  height: 34px;
+  height: 35px;
   pointer-events: none;
 }
