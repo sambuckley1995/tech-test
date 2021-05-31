@@ -3,13 +3,13 @@ import { InputType } from "../../types";
 
 import "./Input.scss";
 
-interface IInputProps {
+interface IEmailInputProps {
   inputValue: string;
   setInputValue: (inputValue: string) => void;
   label: string;
 }
 
-const EmailInput: React.FC<IInputProps> = ({
+const EmailInput: React.FC<IEmailInputProps> = ({
   inputValue,
   setInputValue,
   label,

@@ -3,13 +3,13 @@ import { InputType } from "../../types";
 
 import "./Input.scss";
 
-interface IInputProps {
+interface ICheckboxInputProps {
   inputValue: boolean;
   setInputValue: (inputValue: boolean) => void;
   label: string;
 }
 
-const CheckboxInput: React.FC<IInputProps> = ({
+const CheckboxInput: React.FC<ICheckboxInputProps> = ({
   inputValue,
   setInputValue,
   label,
@@ -20,7 +20,7 @@ const CheckboxInput: React.FC<IInputProps> = ({
       <input
         type={InputType.CHECKBOX}
         checked={inputValue}
-        onClick={() => {
+        onChange={() => {
           setInputValue(!inputValue);
         }}
       />

@@ -2,15 +2,15 @@
 
 .login {
   background-color: white;
-  height: $default-spacing * 100;
-  width: $default-spacing * 100;
+  height: $base-sizing * 100;
+  width: $base-sizing * 100;
 
   border: 1px solid $border-color;
 
   > .login-inner {
-    margin: 50px;
-    height: calc(100% - 100px);
-    width: calc(100% - 100px);
+    margin: $base-sizing * 10;
+    height: calc(100% - #{$base-sizing * 20});
+    width: calc(100% - #{$base-sizing * 20});
 
     display: flex;
     flex-direction: column;
@@ -21,27 +21,36 @@
         color: $text-dark;
         font-weight: 600;
         font-size: $h1-size;
-        margin-bottom: $default-spacing;
+        margin-bottom: $base-sizing;
       }
 
       > p {
-        margin-top: $default-spacing;
-        font-size: 15px;
+        margin-top: $base-sizing;
+        font-size: $paragraph-size;
       }
     }
 
     > button {
-      margin-top: $default-spacing * 2;
-      background-color: white;
-      padding: $default-spacing * 3 $default-spacing * 12;
+      margin-top: $base-sizing * 2;
+      background-color: $white;
+      padding: $base-sizing * 3 $base-sizing * 9;
       border: 1px solid $border-color;
-      border-radius: $border-radius;
+      border-radius: $base-sizing;
       font-family: inherit;
+      font-size: $button-text-size;
+      cursor: pointer;
+      &:hover {
+        background-color: $bg-off-white;
+      }
+      &:focus-visible {
+        outline: none;
+        border: 1px solid $primary-color;
+      }
     }
   }
 }
 
 .app-logo {
-  height: 35px;
+  height: $base-sizing * 7;
   pointer-events: none;
 }

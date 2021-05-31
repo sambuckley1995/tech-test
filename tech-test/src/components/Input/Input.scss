@@ -8,30 +8,32 @@
   }
 
   > input {
-    border-radius: $border-radius;
-    border-color: $border-color;
-    height: $default-spacing * 7;
-
+    border-radius: $base-sizing;
     border: 1px solid $border-color;
+    height: $base-sizing * 7;
 
     &:focus-visible {
+      border: 1px solid $primary-color;
       outline: none;
-      border: 1px solid $active-border-color;
     }
   }
 }
 
 .email {
+  width: 100%;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  width: 100%;
+
   > input {
     width: 100%;
+    padding: $base-sizing * 1 $base-sizing * 2;
   }
+
   > label {
-    margin-bottom: $default-spacing * 2;
+    margin-bottom: $base-sizing * 2;
   }
 }
 
@@ -41,33 +43,37 @@
   justify-content: flex-end;
   align-items: center;
 
+  > label {
+    font-size: $checkbox-size;
+  }
+
   > input {
     margin: 0;
-    width: $default-spacing * 4;
-    height: $default-spacing * 4;
+    width: $base-sizing * 4;
+    height: $base-sizing * 4;
     cursor: pointer;
     -webkit-appearance: none;
     -moz-appearance: none;
     -o-appearance: none;
     appearance: none;
     box-shadow: none;
-    font-size: 0.8em;
+    font-size: $checkbox-size;
     display: flex;
     justify-content: center;
     align-items: center;
-    line-height: 1em;
+    line-height: $base-sizing * 2;
   }
 
   input:checked {
-    background-color: #36a9e0;
+    background-color: $secondary-color;
   }
 
   > input:checked:after {
     content: "✔";
-    color: white;
+    color: $white;
   }
 
   > label {
-    margin-left: $default-spacing * 2;
+    margin-left: $base-sizing * 2;
   }
 }

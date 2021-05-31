@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import CheckboxInput from "../../components/Input/CheckboxInput";
 import EmailInput from "../../components/Input/EmailInput";
-import { InputType } from "../../types";
 import "./Login.scss";
 
 const Login: React.FC = () => {
@@ -16,6 +15,7 @@ const Login: React.FC = () => {
           className="app-logo"
           alt="green-logo"
         />
+
         <div>
           <h1>Operations Studio</h1>
           <p>Please enter you email below</p>
@@ -33,7 +33,16 @@ const Login: React.FC = () => {
           label="Remember this device"
         />
 
-        <button>Sign In</button>
+        <button
+          onClick={() =>
+            console.table({
+              "Email address:": emailAddress,
+              "Should remember this device:": shouldRememberDevice,
+            })
+          }
+        >
+          Sign In
+        </button>
       </div>
     </section>
   );
