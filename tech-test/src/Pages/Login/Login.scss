@@ -31,8 +31,9 @@
     }
 
     > button {
-      background-color: $bg-off-white;
-      padding: $default-spacing * 3 $default-spacing * 5;
+      margin-top: $default-spacing * 2;
+      background-color: white;
+      padding: $default-spacing * 3 $default-spacing * 12;
       border: 1px solid $border-color;
       border-radius: $border-radius;
       font-family: inherit;

@@ -7,7 +7,6 @@ import "./Login.scss";
 const Login: React.FC = () => {
   const [emailAddress, setEmailAddress] = useState("");
   const [shouldRememberDevice, setShouldRememberDevice] = useState(false);
-  console.log(emailAddress);
 
   return (
     <section className="login">
